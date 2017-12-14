@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/drawing.js"></script>
+    <link rel="stylesheet" href="css/draw.css" />
+    <meta charset="utf-8">
+    <title>User: <%= user %></title>
+  </head>
+  <body>
+    <div id="content">
+      <p>Username: <%= user %></p>
+      <div>
+          <label>Roomname:</label>
+          <input type="text" name="roomname" id="roomname" /></br>
+      </div>
+      <div>
+          <label>Nickname:</label>
+          <input type="text" name="playername" id="playername" />
+      </div>
+      <div>
+        <input type="button" value="Enter" onclick="submit();" />
+        <input type="button" value="Clear" onclick="erase();" />
+      </div>
+    </div>
+    <canvas id="canvas" width="300px" height="400px"></canvas>
+  </body>
+</html>
